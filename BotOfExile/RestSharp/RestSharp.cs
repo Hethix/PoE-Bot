@@ -21,9 +21,9 @@ namespace BotOfExile.RestSharpApiCalls
 			EndPoint = new RestClient(EndPointUrl);
 		}
 
-		public bool ReponseStatus(IRestResponse reponse)
+		public bool ResponseStatus(IRestResponse response)
 		{
-			bool responseCode = (reponse.StatusDescription == "OK" || reponse.StatusDescription == "Created" );
+			bool responseCode = (response.StatusDescription == "OK" || response.StatusDescription == "Created" );
 			return responseCode;
 		}
 
@@ -31,7 +31,7 @@ namespace BotOfExile.RestSharpApiCalls
 		{
 			Request = new RestRequest(query, Method.GET);
 			Response = EndPoint.Execute(Request);
-			ReponseStatus(Response);
+			ResponseStatus(Response);
 			var content = Response.Content;
 			return content;
 		}
