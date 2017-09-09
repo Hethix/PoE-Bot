@@ -100,16 +100,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandler.cs" />
+    <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Modules\UniqueHandler.cs" />
     <Compile Include="Modules\Test.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RestSharp\RestSharp.cs" />
-    <Compile Include="UniqueClasses\Accessories.cs" />
+    <Compile Include="RestSharp\Query.cs" />
+    <Compile Include="RestSharp\RestSharpApiCall.cs" />
     <Compile Include="UniqueClasses\Unique.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
